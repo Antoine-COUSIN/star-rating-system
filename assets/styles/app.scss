@@ -1,3 +1,112 @@
+:root {
+    --color-dark: #000;
+    --color-white: #fff;
+    --color-dark-light: #7d8da1;
+    --color-info-dark-hover: #5f6772;
+    --color-background: #f6f6f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: lightgray;
+    background-color: gray;
+    font-family: sans-serif;
+    user-select: none;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container-custom {
+        width: 400px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+            padding: 27px;
+
+            .title {
+                color: #5c5c5c;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            #satisfaction_rating_form_score {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row-reverse;
+
+                input {
+                    display: none;
+                }
+
+                label {
+                    font-size: 40px;
+                    color: gray;
+                    padding: 0 5px;
+                    cursor: pointer;
+                }
+
+                input:not(:checked)~label:hover,
+                input:not(:checked)~label:hover~label {
+                    color: #ea5297;
+                }
+
+                input:checked~label {
+                    color: #ea5297;
+                }
+            }
+        }
+
+        .rate-text {
+            color: #ea5297;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .rate-describe {
+            color: #5c5c5c;
+            font-weight: 500;
+            border: 1px solid #dadada;
+            border-radius: 10px;
+            width: 100%;
+            padding: 10px;
+            resize: none;
+        }
+
+        .btn {
+            color: #fff;
+            font-weight: 500;
+            border: 0;
+            border-radius: 10px;
+            width: 100%;
+            padding: 13px;
+            cursor: pointer;
+            transition: .5s;
+
+            &:hover {
+                background: rgb(92, 182, 255);
+                ;
+            }
+        }
+    }
 }

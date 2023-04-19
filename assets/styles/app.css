@@ -1,3 +1,103 @@
+:root {
+  --color-dark: #000;
+  --color-white: #fff;
+  --color-dark-light: #7d8da1;
+  --color-info-dark-hover: #5f6772;
+  --color-background: #f6f6f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: lightgray;
+  background-color: gray;
+  font-family: sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container-custom {
+  width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+body .container-custom form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 27px;
+}
+body .container-custom form .title {
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: 500;
+}
+body .container-custom form #satisfaction_rating_form_score {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+body .container-custom form #satisfaction_rating_form_score input {
+  display: none;
+}
+body .container-custom form #satisfaction_rating_form_score label {
+  font-size: 40px;
+  color: gray;
+  padding: 0 5px;
+  cursor: pointer;
+}
+body .container-custom form #satisfaction_rating_form_score input:not(:checked) ~ label:hover,
+body .container-custom form #satisfaction_rating_form_score input:not(:checked) ~ label:hover ~ label {
+  color: #ea5297;
+}
+body .container-custom form #satisfaction_rating_form_score input:checked ~ label {
+  color: #ea5297;
+}
+body .container-custom .rate-text {
+  color: #ea5297;
+  font-weight: 700;
+  font-size: 18px;
+}
+body .container-custom .rate-describe {
+  color: #5c5c5c;
+  font-weight: 500;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  resize: none;
+}
+body .container-custom .btn {
+  color: #fff;
+  font-weight: 500;
+  border: 0;
+  border-radius: 10px;
+  width: 100%;
+  padding: 13px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+body .container-custom .btn:hover {
+  background: rgb(92, 182, 255);
 }/*# sourceMappingURL=app.css.map */

@@ -16,6 +16,10 @@ class MainController extends AbstractController
         $form = $this->createForm(SatisfactionRatingFormType::class);
         $form->handleRequest($request);
 
+        if ($form->isSubmitted() && $form->isValid()) {
+            dd($form->getData());
+        }
+
         return $this->render('main/index.html.twig', [
             'form' => $form,
         ]);
