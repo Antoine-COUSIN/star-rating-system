@@ -17,6 +17,8 @@ class MainController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // We recover the data sent by the form in dump and die
+            // The idea here is to avoid the management of this one for the demo
             dd($form->getData());
         }
 

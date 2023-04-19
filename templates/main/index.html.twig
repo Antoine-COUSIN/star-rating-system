@@ -2,13 +2,10 @@
 
 {% block body %}
 <div class="container-custom">
-	<!-- Le front du formulaire ce gère uniquement dans le twig, donc les etoile doivent ce gérer ci-dessous -->
-	<!-- Le composant form offre la possibilité de gérer certaine option qui ont ou peuvent avoir une interraction avec le front -->
-	<!-- Mais cela doit rester pour du nécessaire au fonctionnement back et non pour le fonctionnement du front -->
 	{{form_start(form)}}
 	<span class="title"> Comment étais votre expérience</span>
 	{{form_widget(form.score)}}
-	<span class="rate-text"></span>
+	<span class="rate-text"></span> <!-- this span corresponds to the js option -->
 	{{form_widget(form.comment)}}
 	<button type="submit" class="btn btn-primary">POSTER</button>
 	{{form_end(form)}}
